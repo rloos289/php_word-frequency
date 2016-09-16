@@ -13,8 +13,8 @@
             $sentenceArray = explode(" ",$sentence);
             for ($i=0; $i <= (count($sentenceArray) - 1); $i++)
               {
-                  $simpleWord = $this->wordSimplify($sentenceArray[$i]);
-                  array_push($simplifiedArray, $simpleWord);
+                $simpleWord = $this->wordSimplify($sentenceArray[$i]);
+                array_push($simplifiedArray, $simpleWord);
               }
             return $simplifiedArray;
         }
@@ -24,9 +24,16 @@
             return array_search($word, $sentenceArray);
         }
 
-        function wordFrequency($sentenceArray, $word)
+        function wordFrequency($sentence, $word)
         {
-            return false;
+            $word = $this->wordSimplify($word);
+            $sentence = $this->sentenceSimplify($sentence);
+            if ($this->wordSearch($sentence, $word)) {
+               return true;
+            } else {
+              return false;
+            }
+
         }
     }
 

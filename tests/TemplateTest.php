@@ -50,10 +50,10 @@
         function test_word_frequency()
         {
           $test_wordFrequency = new RepeatCounter;
-          $sentence = ["defeat", "me", "that's", "inconceivable", "inconceivable", "i", "say"];
-          $word = "inconceivable";
+          $sentence = "Defeat me that's inconceivable, inconceivable I say!";
+          $word = "Inconceivable!";
 
-          $result = $test_word_frequency->wordFrequency($sentence, $word);
+          $result = $test_wordFrequency->wordFrequency($sentence, $word);
 
           $this->assertEquals(2, $result);
         }
