@@ -18,6 +18,15 @@
 
             $this->assertEquals('inconceivable', $result);
         }
+        function test_make_array()
+        {
+            $test_makeArray = new RepeatCounter;
+            $input = "Defeat me? That's inconceivable!";
+
+            $result = $test_makeArray->sentenceSimplify($input);
+
+            $this->assertEquals(["defeat", "me", "that's", "inconceivable"], $result);
+        }
     }
       // Testcode example
       //  function test_makeTitleCase_oneWord()
