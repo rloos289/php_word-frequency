@@ -9,7 +9,15 @@
     //on Mac: run: export PATH=$PATH:./vendor/bin
     //then run phpunit tests
     {
+        function test_word_remove_punctuation_and_whitespace()
+        {
+            $test_wordremove = new RepeatCounter;
+            $input = 'Inconceivable!';
 
+            $result = $test_wordremove->wordSimplify($input);
+
+            $this->assertEquals('inconceivable', $result);
+        }
     }
       // Testcode example
       //  function test_makeTitleCase_oneWord()

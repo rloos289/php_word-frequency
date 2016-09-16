@@ -1,9 +1,9 @@
 <?php
     class RepeatCounter
     {
-        function testTemplate($input_title)
+        function wordSimplify($word)
         {
-
+            return true;
         }
     }
 ?>
