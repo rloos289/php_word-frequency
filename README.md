@@ -24,6 +24,7 @@ _You must host this webpage locally_
 * _check if the word appears in the sentence_
   * _input: Sentence=[defeat, me, that's, inconceivable] Word = inconceivable_
   * _output: true_
+
 * _print out the number of times the word appears in the sentence_
   * _input: Sentence=[defeat, me, that's, inconceivable, inconceivable, i, say] Word = inconceivable_
   * _output: 2

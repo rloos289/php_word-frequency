@@ -18,6 +18,11 @@
             }
           return $simplifiedArray;
         }
+
+        function wordSearch($sentence, $word)
+        {
+          return false;
+        }
     }
 
 ?>

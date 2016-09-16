@@ -27,6 +27,16 @@
 
             $this->assertEquals(["defeat", "me", "that's", "inconceivable"], $result);
         }
+        function test_word_appearance()
+        {
+            $test_wordAppearance = new RepeatCounter;
+            $sentence = ["defeat", "me", "that's", "inconceivable"];
+            $word = "inconceivable";
+
+            $result = $test_wordAppearance->wordSearch($sentence, $word);
+
+            $this->assertEquals(true, $result);
+        }
     }
       // Testcode example
       //  function test_makeTitleCase_oneWord()
