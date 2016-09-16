@@ -14,7 +14,7 @@ _You must host this webpage locally_
 
 ## Behavior Driven Development
 * _take a word and strip it of any surrounding punctuation and whitespace, and make it lowercase_
-  * _input: Inconceivable!_
+  * _input: Inconceivable! _
   * _output: inconceivable_
 
 * _break a sentence into individual words and run the previous spec on each word_

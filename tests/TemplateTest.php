@@ -12,7 +12,7 @@
         function test_word_remove_punctuation_and_whitespace()
         {
             $test_wordremove = new RepeatCounter;
-            $input = 'Inconceivable!';
+            $input = 'Inconceivable! ';
 
             $result = $test_wordremove->wordSimplify($input);
 

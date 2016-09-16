@@ -3,7 +3,8 @@
     {
         function wordSimplify($word)
         {
-            return true;
+            $word = trim($word, " !,.?@#$%^&*():;'/\"[]{}");
+            return strtolower($word);
         }
     }
 ?>
