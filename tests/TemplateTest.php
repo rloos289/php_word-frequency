@@ -47,6 +47,16 @@
 
             $this->assertEquals(false, $result);
         }
+        function test_word_frequency()
+        {
+          $test_wordFrequency = new RepeatCounter;
+          $sentence = ["defeat", "me", "that's", "inconceivable", "inconceivable", "i", "say"];
+          $word = "inconceivable";
+
+          $result = $test_word_frequency->wordFrequency($sentence, $word);
+
+          $this->assertEquals(2, $result);
+        }
     }
       // Testcode example
       //  function test_makeTitleCase_oneWord()

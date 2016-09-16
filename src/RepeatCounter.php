@@ -23,6 +23,11 @@
         {
             return array_search($word, $sentenceArray);
         }
+
+        function wordFrequency($sentenceArray, $word)
+        {
+            return false;
+        }
     }
 
 ?>
