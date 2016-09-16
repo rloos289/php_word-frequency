@@ -27,7 +27,7 @@
 
             $this->assertEquals(["defeat", "me", "that's", "inconceivable"], $result);
         }
-        function test_word_appearance()
+        function test_word_appearance_true()
         {
             $test_wordAppearance = new RepeatCounter;
             $sentence = ["defeat", "me", "that's", "inconceivable"];
@@ -36,6 +36,16 @@
             $result = $test_wordAppearance->wordSearch($sentence, $word);
 
             $this->assertEquals(true, $result);
+        }
+        function test_word_appearance_false()
+        {
+            $test_wordAppearance = new RepeatCounter;
+            $sentence = ["defeat", "me", "that's", "ridiculous"];
+            $word = "inconceivable";
+
+            $result = $test_wordAppearance->wordSearch($sentence, $word);
+
+            $this->assertEquals(false, $result);
         }
     }
       // Testcode example

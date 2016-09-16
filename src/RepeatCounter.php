@@ -9,19 +9,19 @@
 
         function sentenceSimplify($sentence)
         {
-          $simplifiedArray = array();
-          $sentenceArray = explode(" ",$sentence);
-          for ($i=0; $i <= (count($sentenceArray) - 1); $i++)
-            {
-                $simpleWord = $this->wordSimplify($sentenceArray[$i]);
-                array_push($simplifiedArray, $simpleWord);
-            }
-          return $simplifiedArray;
+            $simplifiedArray = array();
+            $sentenceArray = explode(" ",$sentence);
+            for ($i=0; $i <= (count($sentenceArray) - 1); $i++)
+              {
+                  $simpleWord = $this->wordSimplify($sentenceArray[$i]);
+                  array_push($simplifiedArray, $simpleWord);
+              }
+            return $simplifiedArray;
         }
 
-        function wordSearch($sentence, $word)
+        function wordSearch($sentenceArray, $word)
         {
-          return false;
+            return array_search($word, $sentenceArray);
         }
     }
 
