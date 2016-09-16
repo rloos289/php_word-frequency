@@ -1,6 +1,23 @@
 <?php
     class RepeatCounter
     {
+        private $match_number;
+
+        function __construct($matches)
+        {
+            $this->match_number = 0;
+        }
+
+        function addMatch()
+        {
+            $this->match_number += 1;
+        }
+
+        function getMatch()
+        {
+            return $this->match_number;
+        }
+
         function wordSimplify($word)
         {
             $word = trim($word, " !,.?@#$%^&*():;'/\"[]{}");
@@ -27,13 +44,21 @@
         function wordFrequency($sentence, $word)
         {
             $word = $this->wordSimplify($word);
-            $sentence = $this->sentenceSimplify($sentence);
-            if ($this->wordSearch($sentence, $word)) {
-               return true;
-            } else {
-              return false;
+            if (is_string($sentence))
+            {
+                $sentence = $this->sentenceSimplify($sentence);
             }
-
+            if ($this->wordSearch($sentence, $word))
+            {
+                $position = array_search($word, $sentence);
+                $sentence = array_slice($sentence, $position + 1);
+                $this->addMatch();
+                return $this->wordFrequency($sentence, $word);//recursion not working, code only runs once
+                // return $sentence;
+                // return $word;
+            } else {
+                return $this->getmatch();
+            }
         }
     }
 

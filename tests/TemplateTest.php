@@ -11,7 +11,7 @@
     {
         function test_word_remove_punctuation_and_whitespace()
         {
-            $test_wordremove = new RepeatCounter;
+            $test_wordremove = new RepeatCounter(0);
             $input = 'Inconceivable! ';
 
             $result = $test_wordremove->wordSimplify($input);
@@ -20,7 +20,7 @@
         }
         function test_make_array()
         {
-            $test_makeArray = new RepeatCounter;
+            $test_makeArray = new RepeatCounter(0);
             $input = "Defeat me? That's inconceivable!";
 
             $result = $test_makeArray->sentenceSimplify($input);
@@ -29,7 +29,7 @@
         }
         function test_word_appearance_true()
         {
-            $test_wordAppearance = new RepeatCounter;
+            $test_wordAppearance = new RepeatCounter(0);
             $sentence = ["defeat", "me", "that's", "inconceivable"];
             $word = "inconceivable";
 
@@ -39,7 +39,7 @@
         }
         function test_word_appearance_false()
         {
-            $test_wordAppearance = new RepeatCounter;
+            $test_wordAppearance = new RepeatCounter(0);
             $sentence = ["defeat", "me", "that's", "ridiculous"];
             $word = "inconceivable";
 
@@ -49,7 +49,7 @@
         }
         function test_word_frequency()
         {
-          $test_wordFrequency = new RepeatCounter;
+          $test_wordFrequency = new RepeatCounter(0);
           $sentence = "Defeat me that's inconceivable, inconceivable I say!";
           $word = "Inconceivable!";
 
