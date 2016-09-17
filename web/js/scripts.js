@@ -3,9 +3,12 @@ console.log('basic javascript is functioning')
 
 //<!-- Front End  -->
 $(document).ready(function(){
-if (jQuery) {
-console.log('jQuery 3.1.0 is loaded');
-} else {
-console.log('jQuery is not loaded');
+  $('form').submit(function(event){
+    var sentence = $('#sentence').val();
+    var word = $('#word').val();
+    if (!word || !sentence){
+      alert('please fill out both forms');
+      event.preventDefault();
     }
+  });
 });
