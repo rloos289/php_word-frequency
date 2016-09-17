@@ -44,21 +44,10 @@
         function wordFrequency($sentence, $word)
         {
             $word = $this->wordSimplify($word);
-            if (is_string($sentence))
-            {
-                $sentence = $this->sentenceSimplify($sentence);
-            }
-            if ($this->wordSearch($sentence, $word))
-            {
-                $position = array_search($word, $sentence);
-                $sentence = array_slice($sentence, $position + 1);
-                $this->addMatch();
-                return $this->wordFrequency($sentence, $word);//recursion not working, code only runs once
-                // return $sentence;
-                // return $word;
-            } else {
-                return $this->getmatch();
-            }
+            $sentence = $this->sentenceSimplify($sentence);
+            $searchArray = array_count_values($sentence);
+            $finalcount = $searchArray[$word];
+            return $finalcount;
         }
     }
 
