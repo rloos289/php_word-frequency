@@ -3,6 +3,10 @@
     <title>Word Frequency Result</title>
   </head>
   <body>
+    {% if result > 0 %}
     <h1>Your word showed up {{ result }} times </h1>
+    {% else %}
+    <h1>"{{ word }}" does not appear in this sentence </h1>
+    {% endif %}
   </body>
 </html>

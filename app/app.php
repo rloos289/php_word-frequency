@@ -11,6 +11,7 @@
     $app = new Silex\Application();
 
     $app['debug'] = true;
+    error_reporting(E_ERROR | E_PARSE);
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views'
@@ -27,7 +28,7 @@
       $inputSentence = $_POST['user_sentence'];
       $inputWord = $_POST['user_word'];
       $wordCount = $newSearch->wordFrequency($inputSentence, $inputWord);
-      return $app['twig']->render("result.html.twig", array('result' => $wordCount));
+      return $app['twig']->render("result.html.twig", array('result' => $wordCount, 'word' => $inputWord));
     });
 
     return $app;

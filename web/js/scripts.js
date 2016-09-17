@@ -1,5 +1,4 @@
 //<!-- Back End -->
-console.log('basic javascript is functioning')
 
 //<!-- Front End  -->
 $(document).ready(function(){
