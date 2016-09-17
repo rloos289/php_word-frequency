@@ -1,8 +1,12 @@
-#p1 {
-  color: red;
+#main {
+  margin-top: 15%;
 }
 
-#button {
-  margin-left: 45%;
-  margin-top: 20%;
+body{
+  background-image: url('../img/clippy.jpg');
+  float:left;
+  background-repeat:no-repeat;
+  background-position: right bottom;
+  background-size: 25%, 25%;
+
 }

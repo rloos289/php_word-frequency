@@ -25,13 +25,13 @@
         }
         function test_word_frequency()
         {
-          $test_wordFrequency = new RepeatCounter;
-          $sentence = "Defeat me that's inconceivable. Inconceivable I say!";
-          $word = "Inconceivable!";
+            $test_wordFrequency = new RepeatCounter;
+            $sentence = "Defeat me that's inconceivable. Inconceivable I say!";
+            $word = "Inconceivable!";
 
-          $result = $test_wordFrequency->wordFrequency($sentence, $word);
+            $result = $test_wordFrequency->countRepeats($sentence, $word);
 
-          $this->assertEquals(2, $result);
+            $this->assertEquals(2, $result);
         }
     }
 

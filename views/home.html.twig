@@ -10,12 +10,23 @@
       <title>Word Frequency Search</title>
   </head>
   <body>
-    <form action="/result" method="post">
-      <p>Please Enter a sentence: </p>
-      <input type="text" id="sentence" name="user_sentence" value="">
-      <p>Please Enter a word to count: </p>
-      <input type="text" id= "word" name="user_word" value="">
-      <button type="submit" name="button">Submit</button>
-    </form>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6" id ='main'>
+          <h1>Word Frequency Counter</h1>
+          <form action="/result" method="post">
+            <div class="form-group">
+              <p>Please Enter a sentence: </p>
+              <input type="text" id="sentence" class="form-control" name="user_sentence" value="">
+              <p>Please Enter a word to count: </p>
+              <input type="text" id= "word" class="form-control" name="user_word" value="">
+              <button type="submit" class= "btn btn-success" name="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

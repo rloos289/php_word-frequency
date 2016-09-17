@@ -12,14 +12,14 @@
             $simplifiedArray = array();
             $sentenceArray = explode(" ",$sentence);
             for ($i=0; $i <= (count($sentenceArray) - 1); $i++)
-              {
+            {
                 $simpleWord = $this->wordSimplify($sentenceArray[$i]);
                 array_push($simplifiedArray, $simpleWord);
-              }
+            }
             return $simplifiedArray;
         }
 
-        function wordFrequency($sentence, $word)
+        function countRepeats($sentence, $word)
         {
             $word = $this->wordSimplify($word);
             $sentence = $this->sentenceSimplify($sentence);

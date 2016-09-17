@@ -13,17 +13,17 @@
 _You must host this webpage locally_
 
 ## Behavior Driven Development
-* _take a word and strip it of any surrounding punctuation and whitespace, and make it lowercase_
-  * _input: Inconceivable!_
+* _take a word, strip it of any surrounding punctuation and whitespace, and make it lowercase_
+  * _input: Inconceivable! (will test, whitespace, punctuation, and capitalization)_
   * _output: inconceivable_
 
 * _break a sentence into individual words and run the previous spec on each word_
-  * _input: Defeat me? That's inconceivable!_
+  * _input: Defeat me? That's inconceivable! (will test word simplification from previous test and provide a sentence to be split)_
   * _output: _[defeat, me, that's, inconceivable]_
 
 * _print out the number of times the word appears in the sentence_
-  * _input: Sentence=[defeat, me, that's, inconceivable, inconceivable, i, say] Word = inconceivable_
-  * _output: 2
+  * _input: Sentence=[defeat, me, that's, inconceivable, inconceivable, i, say] Word = inconceivable (sentence has two instances of a given word so that the function can test for more than one instance)_
+  * _output: 2_
 
 
 ## Known Bugs
