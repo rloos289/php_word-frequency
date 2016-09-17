@@ -1,23 +1,6 @@
 <?php
     class RepeatCounter
     {
-        private $match_number;
-
-        function __construct($matches)
-        {
-            $this->match_number = 0;
-        }
-
-        function addMatch()
-        {
-            $this->match_number += 1;
-        }
-
-        function getMatch()
-        {
-            return $this->match_number;
-        }
-
         function wordSimplify($word)
         {
             $word = trim($word, " !,.?@#$%^&*():;'/\"[]{}");
@@ -34,11 +17,6 @@
                 array_push($simplifiedArray, $simpleWord);
               }
             return $simplifiedArray;
-        }
-
-        function wordSearch($sentenceArray, $word)
-        {
-            return array_search($word, $sentenceArray);
         }
 
         function wordFrequency($sentence, $word)

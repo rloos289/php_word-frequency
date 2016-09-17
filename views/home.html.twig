@@ -1,10 +1,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>Word Frequency Search</title>
   </head>
   <body>
-      <p>hi</p>
-      <a href="/test"><button type="submit" name="button">Tester</button></a>
+    <form action="/result" method="post">
+      <p>Please Enter a sentence: </p>
+      <input type="text" name="user_sentence" value="">
+      <p>Please Enter a word to count: </p>
+      <input type="text" name="user_word" value="">
+      <button type="submit" name="button">Submit</button>
+    </form>
   </body>
 </html>

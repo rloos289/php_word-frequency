@@ -22,8 +22,12 @@
     });
 
   //loads basic php
-    $app->get("/test", function() use ($app) {
-      return 'test variables here';
+    $app->post("/result", function() use ($app) {
+      $newSearch = new RepeatCounter;
+      $inputSentence = $_POST['user_sentence'];
+      $inputWord = $_POST['user_word'];
+      $wordCount = $newSearch->wordFrequency($inputSentence, $inputWord);
+      return $app['twig']->render("result.html.twig", array('result' => $wordCount));
     });
 
     return $app;
